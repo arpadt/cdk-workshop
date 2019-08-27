@@ -6,6 +6,7 @@ exports.handler = async function(event: AWSLambda.APIGatewayEvent) {
   const dynamo = new DynamoDB()
   const lambda = new Lambda()
 
+  // will need to give permission to the counter handler lambda to write to ddb
   await dynamo.updateItem({
     TableName: process.env.HITS_TABLE_NAME as string,
     Key: {
@@ -21,6 +22,7 @@ exports.handler = async function(event: AWSLambda.APIGatewayEvent) {
     },
   }).promise()
 
+  // will need to give permission to the counter handler lambda to invoke the downstream (hello) function
   const resp = await lambda.invoke({
     FunctionName: process.env.DOWNSTREAM_FUNCTION_NAME as string,
     Payload: JSON.stringify(event),

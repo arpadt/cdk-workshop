@@ -10,16 +10,17 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@aws-cdk/aws-apigateway": "1.6.0",
+    "@aws-cdk/aws-dynamodb": "1.6.0",
+    "@aws-cdk/aws-lambda": "1.6.0",
+    "@aws-cdk/core": "1.6.0",
     "@types/aws-lambda": "8.10.31",
     "@types/node": "8.10.45",
-    "aws-cdk": "1.5.0",
+    "aws-cdk": "1.6.0",
     "ts-node": "8.1.0",
     "typescript": "3.3.3333"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "1.5.0",
-    "@aws-cdk/aws-lambda": "1.5.0",
-    "@aws-cdk/core": "1.5.0",
-    "aws-sdk": "^2.518.0"
+    "aws-sdk": "2.518.0"
   }
 }
