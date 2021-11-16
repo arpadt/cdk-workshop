@@ -21,7 +21,7 @@
     "typescript": "3.3.3333"
   },
   "dependencies": {
-    "aws-sdk": "2.518.0",
+    "aws-sdk": "2.814.0",
     "cdk-dynamo-table-viewer": "3.0.5"
   }
 }
